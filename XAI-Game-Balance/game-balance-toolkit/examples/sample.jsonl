@@ -1,0 +1,4 @@
+{"timestamp":"2025-01-01T00:00:00","session_id":"S1","player_id":"P1","level_id":"L1","event_type":"level_start"}
+{"timestamp":"2025-01-01T00:00:00.100","session_id":"S1","player_id":"P1","level_id":"L1","event_type":"action","decision_time_ms":120,"was_backtracked":0}
+{"timestamp":"2025-01-01T00:00:00.300","session_id":"S1","player_id":"P1","level_id":"L1","event_type":"action","decision_time_ms":180,"was_backtracked":0}
+{"timestamp":"2025-01-01T00:00:01.000","session_id":"S1","player_id":"P1","level_id":"L1","event_type":"level_end","success_flag":1,"completion_time_ms":1000}

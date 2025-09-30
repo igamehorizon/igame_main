@@ -1,0 +1,63 @@
+{"timestamp": "2025-01-01T12:00:00", "session_id": "S1", "player_id": "P1", "level_id": "L1", "event_type": "level_start"}
+{"timestamp": "2025-01-01T12:00:00.140000", "session_id": "S1", "player_id": "P1", "level_id": "L1", "event_type": "action", "decision_time_ms": 99, "was_backtracked": 0}
+{"timestamp": "2025-01-01T12:00:00.280000", "session_id": "S1", "player_id": "P1", "level_id": "L1", "event_type": "action", "decision_time_ms": 170, "was_backtracked": 0}
+{"timestamp": "2025-01-01T12:00:00.420000", "session_id": "S1", "player_id": "P1", "level_id": "L1", "event_type": "action", "decision_time_ms": 142, "was_backtracked": 0}
+{"timestamp": "2025-01-01T12:00:00.560000", "session_id": "S1", "player_id": "P1", "level_id": "L1", "event_type": "action", "decision_time_ms": 129, "was_backtracked": 0}
+{"timestamp": "2025-01-01T12:00:00.700000", "session_id": "S1", "player_id": "P1", "level_id": "L1", "event_type": "action", "decision_time_ms": 161, "was_backtracked": 0}
+{"timestamp": "2025-01-01T12:00:00.700000", "session_id": "S1", "player_id": "P1", "level_id": "L1", "event_type": "level_end", "success_flag": 1, "completion_time_ms": 700}
+{"timestamp": "2025-01-01T12:00:15", "session_id": "S2", "player_id": "P2", "level_id": "L1", "event_type": "level_start"}
+{"timestamp": "2025-01-01T12:00:15.360000", "session_id": "S2", "player_id": "P2", "level_id": "L1", "event_type": "action", "decision_time_ms": 316, "was_backtracked": 1}
+{"timestamp": "2025-01-01T12:00:15.720000", "session_id": "S2", "player_id": "P2", "level_id": "L1", "event_type": "action", "decision_time_ms": 369, "was_backtracked": 1}
+{"timestamp": "2025-01-01T12:00:16.080000", "session_id": "S2", "player_id": "P2", "level_id": "L1", "event_type": "action", "decision_time_ms": 396, "was_backtracked": 0}
+{"timestamp": "2025-01-01T12:00:16.440000", "session_id": "S2", "player_id": "P2", "level_id": "L1", "event_type": "action", "decision_time_ms": 352, "was_backtracked": 0}
+{"timestamp": "2025-01-01T12:00:16.800000", "session_id": "S2", "player_id": "P2", "level_id": "L1", "event_type": "action", "decision_time_ms": 384, "was_backtracked": 0}
+{"timestamp": "2025-01-01T12:00:17.160000", "session_id": "S2", "player_id": "P2", "level_id": "L1", "event_type": "action", "decision_time_ms": 381, "was_backtracked": 0}
+{"timestamp": "2025-01-01T12:00:17.520000", "session_id": "S2", "player_id": "P2", "level_id": "L1", "event_type": "action", "decision_time_ms": 375, "was_backtracked": 0}
+{"timestamp": "2025-01-01T12:00:17.880000", "session_id": "S2", "player_id": "P2", "level_id": "L1", "event_type": "action", "decision_time_ms": 370, "was_backtracked": 0}
+{"timestamp": "2025-01-01T12:00:18.456000", "session_id": "S2", "player_id": "P2", "level_id": "L1", "event_type": "level_end", "success_flag": 0, "completion_time_ms": 3456}
+{"timestamp": "2025-01-01T12:00:30", "session_id": "S3", "player_id": "P3", "level_id": "L1", "event_type": "level_start"}
+{"timestamp": "2025-01-01T12:00:30.220000", "session_id": "S3", "player_id": "P3", "level_id": "L1", "event_type": "action", "decision_time_ms": 207, "was_backtracked": 0}
+{"timestamp": "2025-01-01T12:00:30.440000", "session_id": "S3", "player_id": "P3", "level_id": "L1", "event_type": "action", "decision_time_ms": 200, "was_backtracked": 0}
+{"timestamp": "2025-01-01T12:00:30.660000", "session_id": "S3", "player_id": "P3", "level_id": "L1", "event_type": "action", "decision_time_ms": 202, "was_backtracked": 0}
+{"timestamp": "2025-01-01T12:00:30.880000", "session_id": "S3", "player_id": "P3", "level_id": "L1", "event_type": "action", "decision_time_ms": 184, "was_backtracked": 0}
+{"timestamp": "2025-01-01T12:00:31.100000", "session_id": "S3", "player_id": "P3", "level_id": "L1", "event_type": "action", "decision_time_ms": 219, "was_backtracked": 0}
+{"timestamp": "2025-01-01T12:00:31.320000", "session_id": "S3", "player_id": "P3", "level_id": "L1", "event_type": "action", "decision_time_ms": 204, "was_backtracked": 0}
+{"timestamp": "2025-01-01T12:00:31.540000", "session_id": "S3", "player_id": "P3", "level_id": "L1", "event_type": "action", "decision_time_ms": 215, "was_backtracked": 0}
+{"timestamp": "2025-01-01T12:00:31.540000", "session_id": "S3", "player_id": "P3", "level_id": "L1", "event_type": "level_end", "success_flag": 1, "completion_time_ms": 1540}
+{"timestamp": "2025-01-01T12:00:45", "session_id": "S4", "player_id": "P1", "level_id": "L2", "event_type": "level_start"}
+{"timestamp": "2025-01-01T12:00:45.400000", "session_id": "S4", "player_id": "P1", "level_id": "L2", "event_type": "action", "decision_time_ms": 412, "was_backtracked": 1}
+{"timestamp": "2025-01-01T12:00:45.800000", "session_id": "S4", "player_id": "P1", "level_id": "L2", "event_type": "action", "decision_time_ms": 376, "was_backtracked": 1}
+{"timestamp": "2025-01-01T12:00:46.200000", "session_id": "S4", "player_id": "P1", "level_id": "L2", "event_type": "action", "decision_time_ms": 379, "was_backtracked": 1}
+{"timestamp": "2025-01-01T12:00:46.600000", "session_id": "S4", "player_id": "P1", "level_id": "L2", "event_type": "action", "decision_time_ms": 387, "was_backtracked": 0}
+{"timestamp": "2025-01-01T12:00:47", "session_id": "S4", "player_id": "P1", "level_id": "L2", "event_type": "action", "decision_time_ms": 392, "was_backtracked": 0}
+{"timestamp": "2025-01-01T12:00:47.400000", "session_id": "S4", "player_id": "P1", "level_id": "L2", "event_type": "action", "decision_time_ms": 410, "was_backtracked": 0}
+{"timestamp": "2025-01-01T12:00:47.800000", "session_id": "S4", "player_id": "P1", "level_id": "L2", "event_type": "action", "decision_time_ms": 400, "was_backtracked": 0}
+{"timestamp": "2025-01-01T12:00:48.200000", "session_id": "S4", "player_id": "P1", "level_id": "L2", "event_type": "action", "decision_time_ms": 415, "was_backtracked": 0}
+{"timestamp": "2025-01-01T12:00:48.600000", "session_id": "S4", "player_id": "P1", "level_id": "L2", "event_type": "action", "decision_time_ms": 383, "was_backtracked": 0}
+{"timestamp": "2025-01-01T12:00:49", "session_id": "S4", "player_id": "P1", "level_id": "L2", "event_type": "action", "decision_time_ms": 429, "was_backtracked": 0}
+{"timestamp": "2025-01-01T12:00:49.800000", "session_id": "S4", "player_id": "P1", "level_id": "L2", "event_type": "level_end", "success_flag": 0, "completion_time_ms": 4800}
+{"timestamp": "2025-01-01T12:01:00", "session_id": "S5", "player_id": "P2", "level_id": "L2", "event_type": "level_start"}
+{"timestamp": "2025-01-01T12:01:00.500000", "session_id": "S5", "player_id": "P2", "level_id": "L2", "event_type": "action", "decision_time_ms": 500, "was_backtracked": 1}
+{"timestamp": "2025-01-01T12:01:01", "session_id": "S5", "player_id": "P2", "level_id": "L2", "event_type": "action", "decision_time_ms": 492, "was_backtracked": 1}
+{"timestamp": "2025-01-01T12:01:01.500000", "session_id": "S5", "player_id": "P2", "level_id": "L2", "event_type": "action", "decision_time_ms": 516, "was_backtracked": 1}
+{"timestamp": "2025-01-01T12:01:02", "session_id": "S5", "player_id": "P2", "level_id": "L2", "event_type": "action", "decision_time_ms": 507, "was_backtracked": 1}
+{"timestamp": "2025-01-01T12:01:02.500000", "session_id": "S5", "player_id": "P2", "level_id": "L2", "event_type": "action", "decision_time_ms": 495, "was_backtracked": 0}
+{"timestamp": "2025-01-01T12:01:03", "session_id": "S5", "player_id": "P2", "level_id": "L2", "event_type": "action", "decision_time_ms": 486, "was_backtracked": 0}
+{"timestamp": "2025-01-01T12:01:03.500000", "session_id": "S5", "player_id": "P2", "level_id": "L2", "event_type": "action", "decision_time_ms": 531, "was_backtracked": 0}
+{"timestamp": "2025-01-01T12:01:04", "session_id": "S5", "player_id": "P2", "level_id": "L2", "event_type": "action", "decision_time_ms": 482, "was_backtracked": 0}
+{"timestamp": "2025-01-01T12:01:04.500000", "session_id": "S5", "player_id": "P2", "level_id": "L2", "event_type": "action", "decision_time_ms": 528, "was_backtracked": 0}
+{"timestamp": "2025-01-01T12:01:05", "session_id": "S5", "player_id": "P2", "level_id": "L2", "event_type": "action", "decision_time_ms": 473, "was_backtracked": 0}
+{"timestamp": "2025-01-01T12:01:05.500000", "session_id": "S5", "player_id": "P2", "level_id": "L2", "event_type": "action", "decision_time_ms": 461, "was_backtracked": 0}
+{"timestamp": "2025-01-01T12:01:06", "session_id": "S5", "player_id": "P2", "level_id": "L2", "event_type": "action", "decision_time_ms": 525, "was_backtracked": 0}
+{"timestamp": "2025-01-01T12:01:07.200000", "session_id": "S5", "player_id": "P2", "level_id": "L2", "event_type": "level_end", "success_flag": 0, "completion_time_ms": 7200}
+{"timestamp": "2025-01-01T12:01:15", "session_id": "S6", "player_id": "P3", "level_id": "L2", "event_type": "level_start"}
+{"timestamp": "2025-01-01T12:01:15.280000", "session_id": "S6", "player_id": "P3", "level_id": "L2", "event_type": "action", "decision_time_ms": 294, "was_backtracked": 1}
+{"timestamp": "2025-01-01T12:01:15.560000", "session_id": "S6", "player_id": "P3", "level_id": "L2", "event_type": "action", "decision_time_ms": 307, "was_backtracked": 0}
+{"timestamp": "2025-01-01T12:01:15.840000", "session_id": "S6", "player_id": "P3", "level_id": "L2", "event_type": "action", "decision_time_ms": 306, "was_backtracked": 0}
+{"timestamp": "2025-01-01T12:01:16.120000", "session_id": "S6", "player_id": "P3", "level_id": "L2", "event_type": "action", "decision_time_ms": 289, "was_backtracked": 0}
+{"timestamp": "2025-01-01T12:01:16.400000", "session_id": "S6", "player_id": "P3", "level_id": "L2", "event_type": "action", "decision_time_ms": 287, "was_backtracked": 0}
+{"timestamp": "2025-01-01T12:01:16.680000", "session_id": "S6", "player_id": "P3", "level_id": "L2", "event_type": "action", "decision_time_ms": 281, "was_backtracked": 0}
+{"timestamp": "2025-01-01T12:01:16.960000", "session_id": "S6", "player_id": "P3", "level_id": "L2", "event_type": "action", "decision_time_ms": 290, "was_backtracked": 0}
+{"timestamp": "2025-01-01T12:01:17.240000", "session_id": "S6", "player_id": "P3", "level_id": "L2", "event_type": "action", "decision_time_ms": 265, "was_backtracked": 0}
+{"timestamp": "2025-01-01T12:01:17.520000", "session_id": "S6", "player_id": "P3", "level_id": "L2", "event_type": "action", "decision_time_ms": 298, "was_backtracked": 0}
+{"timestamp": "2025-01-01T12:01:17.520000", "session_id": "S6", "player_id": "P3", "level_id": "L2", "event_type": "level_end", "success_flag": 1, "completion_time_ms": 2520}

@@ -1,0 +1,42 @@
+{
+  "level_id": "L2",
+  "n_sessions": 9,
+  "predicted_success_rate": 0.33590467821972714,
+  "archetype_distribution": {
+    "balanced": 1.0
+  },
+  "top_features": [
+    [
+      "completion_time_ms",
+      3.789324878275549
+    ],
+    [
+      "player_elo",
+      2.0338146972403695
+    ],
+    [
+      "mean_decision_time",
+      0.9449767161746242
+    ],
+    [
+      "action_count",
+      0.8256112165965674
+    ],
+    [
+      "level_elo",
+      0.5695979796946552
+    ],
+    [
+      "session_time",
+      0.0
+    ],
+    [
+      "attempt_count",
+      0.0
+    ],
+    [
+      "backtrack_ratio",
+      0.0
+    ]
+  ]
+}

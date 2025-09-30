@@ -1,0 +1,22 @@
+{
+  "n_events": 2639,
+  "n_sessions": 100,
+  "n_players": 45,
+  "n_levels": 12,
+  "val_auc_success": 0.96875,
+  "features_used": [
+    "session_time",
+    "attempt_count",
+    "action_count",
+    "mean_decision_time",
+    "backtrack_ratio",
+    "completion_time_ms",
+    "player_elo",
+    "level_elo"
+  ],
+  "archetype_names": {
+    "0": "balanced",
+    "1": "balanced",
+    "2": "balanced"
+  }
+}

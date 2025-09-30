@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "game-balance-toolkit"
+version = "0.1.0"
+description = "Research-grade AI+XAI toolkit for level balance demos (V1)"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "pandas>=2.0.0",
+    "numpy>=1.24.0",
+    "scikit-learn>=1.3.0",
+    "matplotlib>=3.7.0",
+    "shap>=0.44.0",
+]
+
+[project.scripts]
+gbt = "gbt.cli:main"
