@@ -1,4 +1,4 @@
-# Immerse
+
 # World Builder
 
 World Builder is a Unity-based VR scene authoring tool that allows users to create, edit, and experience interactive 3D environments. It supports dynamic runtime asset import, prefab-based instantiation, a powerful scene inspector UI, and VR integration.
