@@ -32,7 +32,7 @@ Before setting up the ML-Agents infrastructure, make sure your core game loop is
    - `OnActionReceived(ActionBuffers actions)`: Converts brain outputs into movement forces and assigns rewards via `SetReward()` or `AddReward()`.
 
 4. **Add Component: `Decision Requester`**
-   - Attach a `Decision Requester` component to your Agent GameObject [cite: 1]. Without this, your agent will not request actions from the brain and will remain frozen during Play mode [cite: 1].
+   - Attach a `Decision Requester` component to your Agent GameObject  . Without this, your agent will not request actions from the brain and will remain frozen during Play mode  .
 
 ---
 
@@ -46,7 +46,7 @@ scp "C:\Path\To\your_config.yaml" orestiss@160.40.54.131:/home/orestiss/workspac
 ```
 
 ### Step 2: Establish the SSH Tunnel
-Open a second, separate Command Prompt window on your local machine and start the SSH tunnel [cite: 1]. Keep this window open throughout your entire training session:
+Open a second, separate Command Prompt window on your local machine and start the SSH tunnel . Keep this window open throughout your entire training session:
 
 ```bash
 ssh -L 5004:localhost:5004 orestiss@160.40.54.131
@@ -67,7 +67,7 @@ docker run --name agent_trainer -it --rm \
 Once the terminal initializes and displays:
 `[INFO] Listening on port 5004. Start training by pressing the Play button in the Unity Editor...` 
 
-Go to Unity and press **Play** [cite: 1]. Your agent will immediately start training.
+Go to Unity and press **Play**  . Your agent will immediately start training.
 
 ---
 
