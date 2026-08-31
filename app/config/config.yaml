@@ -1,7 +1,0 @@
-model:
-  base_model_path: "Qwen/Qwen3-1.7B"
-  dtype: "float16"
-  device: "cuda"
-  
-
-
