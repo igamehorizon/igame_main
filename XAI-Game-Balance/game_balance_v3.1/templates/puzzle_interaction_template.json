@@ -1,0 +1,16 @@
+{
+  "gameplay_instance": {
+    "instance_id": "pi_session_001",
+    "start_condition": "player enters room",
+    "end_condition": "puzzle solved or player quits",
+    "success_condition": "all puzzle elements activated correctly",
+    "failure_condition": "player quits or resets",
+    "telemetry_family": "puzzle_interaction"
+  },
+  "events": [
+    {"timestamp":"2024-01-01T10:00:00Z","session_id":"s001","player_id":"player_a","level_id":"room_1","event_type":"level_start","decision_time_ms":0,"completion_time_ms":0,"success_flag":0,"interaction_count":0,"wrong_interaction_count":0,"hint_count":0},
+    {"timestamp":"2024-01-01T10:00:05Z","session_id":"s001","player_id":"player_a","level_id":"room_1","event_type":"action","decision_time_ms":4800,"completion_time_ms":0,"success_flag":0,"interaction_count":1,"wrong_interaction_count":1,"hint_count":0},
+    {"timestamp":"2024-01-01T10:00:18Z","session_id":"s001","player_id":"player_a","level_id":"room_1","event_type":"action","decision_time_ms":3200,"completion_time_ms":0,"success_flag":0,"interaction_count":1,"wrong_interaction_count":0,"hint_count":1},
+    {"timestamp":"2024-01-01T10:00:30Z","session_id":"s001","player_id":"player_a","level_id":"room_1","event_type":"level_end","decision_time_ms":0,"completion_time_ms":30000,"success_flag":1,"interaction_count":0,"wrong_interaction_count":0,"hint_count":0}
+  ]
+}

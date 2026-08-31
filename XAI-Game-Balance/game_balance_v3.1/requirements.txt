@@ -1,0 +1,14 @@
+fastapi>=0.115.0
+uvicorn>=0.30.0
+python-multipart>=0.0.9
+pydantic>=2.0.0
+numpy>=1.26.0
+pandas>=2.1.0
+scikit-learn>=1.4.0
+streamlit>=1.35.0
+requests>=2.31.0
+# SHAP is the default explainability method as of v4 (falls back to
+# feature_importances_ automatically if this package is ever missing)
+shap>=0.44.0
+# Used by scripts/analyze_pilot.py to generate rating/comparison charts
+matplotlib>=3.8.0

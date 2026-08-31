@@ -1,0 +1,16 @@
+{
+  "gameplay_instance": {
+    "instance_id": "ap_session_001",
+    "start_condition": "player starts task",
+    "end_condition": "task complete or player quits",
+    "success_condition": "player completes precision task",
+    "failure_condition": "player quits or precision threshold not met",
+    "telemetry_family": "accessibility_precision"
+  },
+  "events": [
+    {"timestamp":"2024-01-01T10:00:00Z","session_id":"s001","player_id":"player_a","level_id":"task_1","event_type":"level_start","decision_time_ms":0,"completion_time_ms":0,"success_flag":0,"error_count":0,"assistance_used":0,"idle_time_ms":0,"input_precision_score":0,"undo_count":0},
+    {"timestamp":"2024-01-01T10:00:06Z","session_id":"s001","player_id":"player_a","level_id":"task_1","event_type":"action","decision_time_ms":5800,"completion_time_ms":0,"success_flag":0,"error_count":1,"assistance_used":0,"idle_time_ms":3200,"input_precision_score":0.72,"undo_count":0},
+    {"timestamp":"2024-01-01T10:00:14Z","session_id":"s001","player_id":"player_a","level_id":"task_1","event_type":"action","decision_time_ms":4200,"completion_time_ms":0,"success_flag":0,"error_count":0,"assistance_used":1,"idle_time_ms":1800,"input_precision_score":0.85,"undo_count":1},
+    {"timestamp":"2024-01-01T10:00:20Z","session_id":"s001","player_id":"player_a","level_id":"task_1","event_type":"level_end","decision_time_ms":0,"completion_time_ms":20000,"success_flag":1,"error_count":0,"assistance_used":0,"idle_time_ms":0,"input_precision_score":0,"undo_count":0}
+  ]
+}

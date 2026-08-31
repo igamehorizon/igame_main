@@ -1,0 +1,37 @@
+{
+  "gameplay_instance": {
+    "instance_id": "ap_showcase_001",
+    "start_condition": "player starts task",
+    "end_condition": "task complete or player quits",
+    "success_condition": "player completes precision task",
+    "failure_condition": "player quits or precision threshold not met",
+    "telemetry_family": "accessibility_precision"
+  },
+  "events": [
+    {"timestamp":"2024-01-01T10:00:00Z","session_id":"s001","player_id":"player_a","level_id":"task_1","event_type":"level_start","decision_time_ms":0,"completion_time_ms":0,"success_flag":0,"error_count":0,"assistance_used":0,"idle_time_ms":0,"input_precision_score":0,"undo_count":0},
+    {"timestamp":"2024-01-01T10:00:04Z","session_id":"s001","player_id":"player_a","level_id":"task_1","event_type":"action","decision_time_ms":3800,"completion_time_ms":0,"success_flag":0,"error_count":0,"assistance_used":0,"idle_time_ms":1200,"input_precision_score":0.88,"undo_count":0},
+    {"timestamp":"2024-01-01T10:00:09Z","session_id":"s001","player_id":"player_a","level_id":"task_1","event_type":"action","decision_time_ms":4100,"completion_time_ms":0,"success_flag":0,"error_count":1,"assistance_used":0,"idle_time_ms":900,"input_precision_score":0.76,"undo_count":1},
+    {"timestamp":"2024-01-01T10:00:14Z","session_id":"s001","player_id":"player_a","level_id":"task_1","event_type":"level_end","decision_time_ms":0,"completion_time_ms":14000,"success_flag":1,"error_count":0,"assistance_used":0,"idle_time_ms":0,"input_precision_score":0,"undo_count":0},
+
+    {"timestamp":"2024-01-01T10:01:00Z","session_id":"s002","player_id":"player_b","level_id":"task_1","event_type":"level_start","decision_time_ms":0,"completion_time_ms":0,"success_flag":0,"error_count":0,"assistance_used":0,"idle_time_ms":0,"input_precision_score":0,"undo_count":0},
+    {"timestamp":"2024-01-01T10:01:05Z","session_id":"s002","player_id":"player_b","level_id":"task_1","event_type":"action","decision_time_ms":4500,"completion_time_ms":0,"success_flag":0,"error_count":0,"assistance_used":1,"idle_time_ms":2100,"input_precision_score":0.91,"undo_count":0},
+    {"timestamp":"2024-01-01T10:01:11Z","session_id":"s002","player_id":"player_b","level_id":"task_1","event_type":"level_end","decision_time_ms":0,"completion_time_ms":11000,"success_flag":1,"error_count":0,"assistance_used":0,"idle_time_ms":0,"input_precision_score":0,"undo_count":0},
+
+    {"timestamp":"2024-01-01T10:02:00Z","session_id":"s003","player_id":"player_c","level_id":"task_2","event_type":"level_start","decision_time_ms":0,"completion_time_ms":0,"success_flag":0,"error_count":0,"assistance_used":0,"idle_time_ms":0,"input_precision_score":0,"undo_count":0},
+    {"timestamp":"2024-01-01T10:02:10Z","session_id":"s003","player_id":"player_c","level_id":"task_2","event_type":"action","decision_time_ms":9800,"completion_time_ms":0,"success_flag":0,"error_count":3,"assistance_used":2,"idle_time_ms":12000,"input_precision_score":0.31,"undo_count":2},
+    {"timestamp":"2024-01-01T10:02:24Z","session_id":"s003","player_id":"player_c","level_id":"task_2","event_type":"action","decision_time_ms":13200,"completion_time_ms":0,"success_flag":0,"error_count":4,"assistance_used":3,"idle_time_ms":18000,"input_precision_score":0.28,"undo_count":3},
+    {"timestamp":"2024-01-01T10:02:38Z","session_id":"s003","player_id":"player_c","level_id":"task_2","event_type":"level_start","decision_time_ms":0,"completion_time_ms":0,"success_flag":0,"error_count":0,"assistance_used":0,"idle_time_ms":0,"input_precision_score":0,"undo_count":0},
+    {"timestamp":"2024-01-01T10:02:50Z","session_id":"s003","player_id":"player_c","level_id":"task_2","event_type":"action","decision_time_ms":11500,"completion_time_ms":0,"success_flag":0,"error_count":2,"assistance_used":2,"idle_time_ms":9500,"input_precision_score":0.35,"undo_count":2},
+    {"timestamp":"2024-01-01T10:03:05Z","session_id":"s003","player_id":"player_c","level_id":"task_2","event_type":"level_end","decision_time_ms":0,"completion_time_ms":65000,"success_flag":0,"error_count":0,"assistance_used":0,"idle_time_ms":0,"input_precision_score":0,"undo_count":0},
+
+    {"timestamp":"2024-01-01T10:04:00Z","session_id":"s004","player_id":"player_d","level_id":"task_2","event_type":"level_start","decision_time_ms":0,"completion_time_ms":0,"success_flag":0,"error_count":0,"assistance_used":0,"idle_time_ms":0,"input_precision_score":0,"undo_count":0},
+    {"timestamp":"2024-01-01T10:04:12Z","session_id":"s004","player_id":"player_d","level_id":"task_2","event_type":"action","decision_time_ms":11800,"completion_time_ms":0,"success_flag":0,"error_count":4,"assistance_used":3,"idle_time_ms":22000,"input_precision_score":0.24,"undo_count":4},
+    {"timestamp":"2024-01-01T10:04:28Z","session_id":"s004","player_id":"player_d","level_id":"task_2","event_type":"action","decision_time_ms":15500,"completion_time_ms":0,"success_flag":0,"error_count":5,"assistance_used":4,"idle_time_ms":25000,"input_precision_score":0.19,"undo_count":3},
+    {"timestamp":"2024-01-01T10:04:44Z","session_id":"s004","player_id":"player_d","level_id":"task_2","event_type":"level_end","decision_time_ms":0,"completion_time_ms":44000,"success_flag":0,"error_count":0,"assistance_used":0,"idle_time_ms":0,"input_precision_score":0,"undo_count":0},
+
+    {"timestamp":"2024-01-01T10:05:00Z","session_id":"s005","player_id":"player_e","level_id":"task_2","event_type":"level_start","decision_time_ms":0,"completion_time_ms":0,"success_flag":0,"error_count":0,"assistance_used":0,"idle_time_ms":0,"input_precision_score":0,"undo_count":0},
+    {"timestamp":"2024-01-01T10:05:09Z","session_id":"s005","player_id":"player_e","level_id":"task_2","event_type":"action","decision_time_ms":8800,"completion_time_ms":0,"success_flag":0,"error_count":2,"assistance_used":2,"idle_time_ms":8500,"input_precision_score":0.42,"undo_count":1},
+    {"timestamp":"2024-01-01T10:05:20Z","session_id":"s005","player_id":"player_e","level_id":"task_2","event_type":"action","decision_time_ms":10200,"completion_time_ms":0,"success_flag":0,"error_count":3,"assistance_used":2,"idle_time_ms":11000,"input_precision_score":0.38,"undo_count":2},
+    {"timestamp":"2024-01-01T10:05:34Z","session_id":"s005","player_id":"player_e","level_id":"task_2","event_type":"level_end","decision_time_ms":0,"completion_time_ms":34000,"success_flag":0,"error_count":0,"assistance_used":0,"idle_time_ms":0,"input_precision_score":0,"undo_count":0}
+  ]
+}
