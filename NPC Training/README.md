@@ -10,9 +10,9 @@ The NPC Training Module allows you to decouple AI training from your local machi
 
 ### Phase 1: Build the Foundation
 Before setting up the ML-Agents infrastructure, make sure your core game loop is fully functioning :
-* Physics and environmental layout [cite: 1]
-* Controls and interactions [cite: 1]
-* Win/loss and reset logic [cite: 1]
+* Physics and environmental layout
+* Controls and interactions 
+* Win/loss and reset logic 
 
 ### Phase 2: Setting Up the Agent Logic
 
