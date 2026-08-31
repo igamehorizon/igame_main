@@ -6,35 +6,35 @@ This module enables real-time LLM inference inside Unity scenes [cite: 1]. NPCs 
 
 ## 🏗️ Architecture Summary
 
-* **Personality Configuration:** Define backstories, secrets, and tone via structured prompts or JSON files [cite: 1].
-* **Prompt Engineering:** System-level constraints guide character boundaries and line limits [cite: 1].
-* **Real-Time Inference:** Direct binding between player UI input fields and LLM character instances [cite: 1].
+* **Personality Configuration:** Define backstories, secrets, and tone via structured prompts or JSON files.
+* **Prompt Engineering:** System-level constraints guide character boundaries and line limits.
+* **Real-Time Inference:** Direct binding between player UI input fields and LLM character instances.
 
 ---
 
 ## 🛠️ Implementation Steps
 
 ### 1. LLM Manager Setup
-1. Create an empty GameObject in your scene named `LLM Manager` [cite: 1].
+1. Create an empty GameObject in your scene named `LLM Manager`.
 2. Attach the `LLM` script component to it [cite: 1].
-3. Enable `Dont Destroy On Load` if persisting across scenes [cite: 1].
+3. Enable `Dont Destroy On Load` if persisting across scenes].
 
 ### 2. Model Selection & Loading
-* **Selected Model:** `Llama 3.2 3B` (or equivalent GGUF weights) [cite: 1].
-* **Chat Template:** Select `Llama 3 (chat)` [cite: 1].
-* **Trade-off Consideration:** Smaller models (<3B) yield faster execution suitable for lightweight NPCs, while larger models provide richer dialogue at the cost of processing latency [cite: 1].
+* **Selected Model:** `Llama 3.2 3B` (or equivalent GGUF weights).
+* **Chat Template:** Select `Llama 3 (chat)`.
+* **Trade-off Consideration:** Smaller models (<3B) yield faster execution suitable for lightweight NPCs, while larger models provide richer dialogue at the cost of processing latency.
 
 ### 3. Profile & Background Configuration
-Attach the `LLM Character` script to any interactive NPC GameObject [cite: 1]:
-* Link the `LLM Manager` reference [cite: 1].
-* Set character identity parameters [cite: 1]:
-  - **Name & Occupation** [cite: 1]
-  - **Personality Traits** [cite: 1]
-  - **Goals & Secrets** [cite: 1]
-  - **Dialogue Style & Line Limits** [cite: 1]
+Attach the `LLM Character` script to any interactive NPC GameObject :
+* Link the `LLM Manager` reference.
+* Set character identity parameters:
+  - **Name & Occupation**
+  - **Personality Traits** 
+  - **Goals & Secrets** 
+  - **Dialogue Style & Line Limits**
 
 ### 4. Automated Batch Allocation (JSON)
-For multi-NPC environments, manage profiles centrally using a structured JSON file [cite: 1]:
+For multi-NPC environments, manage profiles centrally using a structured JSON file:
 
 ```json
 {
@@ -61,20 +61,20 @@ For multi-NPC environments, manage profiles centrally using a structured JSON fi
 }
 ```
 
-Assign profiles in batch using the `NPC Data Assigner` script attached to an empty `NPC Manager` GameObject [cite: 1]:
-1. Assign the JSON file to `Json File` [cite: 1].
-2. Drag NPC GameObjects into the `Npc Objects` array in matching order [cite: 1].
+Assign profiles in batch using the `NPC Data Assigner` script attached to an empty `NPC Manager` GameObject :
+1. Assign the JSON file to `Json File` .
+2. Drag NPC GameObjects into the `Npc Objects` array in matching order.
 
 ### 5. User Interface Setup
-Connect UI components (e.g., `TMP_InputField`, `TextMeshProUGUI`) via the `AI Response UI` controller component to display real-time streaming dialogue [cite: 1].
+Connect UI components (e.g., `TMP_InputField`, `TextMeshProUGUI`) via the `AI Response UI` controller component to display real-time streaming dialogue .
 
 ### 6. Animation & State Integration
-Map NPC response triggers to Mecanim Animator states to mirror conversation tone [cite: 1]:
-* **Recommended States:** `Idle`, `Speaking`, `Happy`, `Angry`, `Curious`, `Thinking`, `Neutral Reaction` [cite: 1].
+Map NPC response triggers to Mecanim Animator states to mirror conversation tone :
+* **Recommended States:** `Idle`, `Speaking`, `Happy`, `Angry`, `Curious`, `Thinking`, `Neutral Reaction`.
 
 ---
 
 ## 🎨 Recommended External Resources
 
-* **3D Rigged Characters & Animations:** [Mixamo](https://www.mixamo.com) for rigged assets and conversational motion clips [cite: 1].
-* **Environments & Props:** [Sketchfab](https://sketchfab.com) for 3D props and interactive scene elements [cite: 1].
+* **3D Rigged Characters & Animations:** [Mixamo](https://www.mixamo.com) for rigged assets and conversational motion clips.
+* **Environments & Props:** [Sketchfab](https://sketchfab.com) for 3D props and interactive scene elements .
