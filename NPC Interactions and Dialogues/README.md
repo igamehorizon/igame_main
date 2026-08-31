@@ -1,6 +1,6 @@
 ## 🔍 Overview
 
-This module enables real-time LLM inference inside Unity scenes [cite: 1]. NPCs maintain consistent personalities, backstory knowledge, and dialogue styles while dynamically responding to player inputs [cite: 1].
+This module enables real-time LLM inference inside Unity scenes  . NPCs maintain consistent personalities, backstory knowledge, and dialogue styles while dynamically responding to player inputs  .
 
 ---
 
@@ -16,7 +16,7 @@ This module enables real-time LLM inference inside Unity scenes [cite: 1]. NPCs 
 
 ### 1. LLM Manager Setup
 1. Create an empty GameObject in your scene named `LLM Manager`.
-2. Attach the `LLM` script component to it [cite: 1].
+2. Attach the `LLM` script component to it  .
 3. Enable `Dont Destroy On Load` if persisting across scenes].
 
 ### 2. Model Selection & Loading
