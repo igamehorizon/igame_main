@@ -4,7 +4,7 @@ A FastAPI service for AI-powered story generation and image aesthetics, featurin
 - **Story Generation**: Create interactive fiction using advanced language models
 - **Image Aesthetics**: Generate stylized game visuals with customizable parameters
 
-- Try the API in http://160.40.52.45:8000/docs#/default
+- Try the API in http://160.40.51.187:8000/docs#/default
 
 ## Table of Contents
 - [API Endpoints](#api-endpoints)
@@ -102,10 +102,6 @@ Service health check.
 - Python 3.10+
 - NVIDIA GPU with CUDA support (recommended)
 - 12+ GB RAM
-- You will need your Hugging Face User Access Token to create the yaml file
-- Model: Qwen/Qwen3-1.7B
-
-
 
 ### Installation
 ```bash

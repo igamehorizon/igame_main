@@ -4,6 +4,131 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 from PIL import Image
 from io import BytesIO
 from diffusers import StableDiffusionImg2ImgPipeline
+from typing import Optional, Union
+
+# Keep your 5-style mapping exactly as in the demo config
+STYLE_SUFFIX = {
+    "retro": (
+        "retro game art, vintage color palette, "
+        "subtle film grain, 1980s poster vibe"
+    ),
+    "cartoon": (
+        "clean cartoon style, bold outlines, "
+        "simplified shading, vibrant flat colors"
+    ),
+    "minimalistic": (
+        "minimalist design, simple geometric shapes, "
+        "flat colors, lots of negative space"
+    ),
+    "stylised": (
+        "stylized concept art, exaggerated forms, "
+        "painterly textures, dramatic lighting"
+    ),
+    "realistic": (
+        "highly detailed, realistic materials, "
+        "natural lighting, sharp focus, cinematic"
+    ),
+}
+
+# Optional: a gentle negative prompt to reduce artifacts (Turbo often uses guidance=0)
+NEGATIVE_HINT = (
+    "blurry, low resolution, jpeg artifacts, watermark, "
+    "text artifacts, deformed, extra limbs, distorted"
+)
+
+def _clean(s: Optional[str]) -> str:
+    """Collapse whitespace, tolerate None."""
+    return " ".join((s or "").split()).strip()
+
+
+def _style_suffix(style: str) -> str:
+    """Resolve style id to suffix text."""
+    s = _clean(style).lower()
+
+    # accept both UI keys and old enum labels
+    aliases = {
+        "retro style": "retro",
+        "cartoon style": "cartoon",
+        "minimalistic style": "minimalistic",
+        "stylised style": "stylised",
+        "realistic style": "realistic",
+    }
+    s = aliases.get(s, s)
+
+    return STYLE_SUFFIX.get(s, "")
+
+def build_sd_prompts_text2img(style: str, prompt: str) -> str:
+    """
+    Text2img:
+    - user describes the scene/subject/mood
+    - we append the chosen style suffix
+    """
+    base = _clean(prompt)
+    suffix = _style_suffix(style)
+    #suffix = STYLE_SUFFIX.get(_style_key(style), "")
+    '''
+    if not base and not suffix:
+        return ""
+    if suffix:
+        return f"{base}, {suffix}" if base else suffix
+    return base
+    '''
+    if base and suffix:
+        return f"{base}, {suffix}"
+    return base or suffix
+
+
+def build_sd_prompts_img2img(style: str, style_notes: Optional[str] = "") -> str:
+    """
+    Img2img:
+    - user does NOT need to describe the image content
+    - we internally add a "preserve structure" scaffold to reduce semantic drift
+    - user prompt is treated as *style notes only*
+    """
+    suffix = _style_suffix(style)
+    #suffix = STYLE_SUFFIX.get(_style_key(style), "")
+    notes = _clean(style_notes)
+
+    # LONG
+    '''
+    preserve = (
+        "Preserve the original image content, subject, and scene. "
+        "Preserve the composition, layout, and main shapes/edges. "
+        "Do not add, remove, or replace objects. "
+        "Only change rendering style, colors, materials, shading, and texture."
+    )
+
+    parts = [preserve]
+    if suffix:
+        parts.append(f"Apply this style: {suffix}.")
+    if notes:
+        parts.append(f"Style notes: {notes}.")
+    return " ".join(parts)
+    '''
+
+    #SHORT
+    preserve = (
+        "Preserve the original subject and scene. Preserve composition and main shapes. "
+        "Do not add, remove, or replace objects. Only change colors, textures, lighting, and rendering style."
+    )
+
+    # Keep it SHORT to avoid CLIP truncation
+    parts = [preserve]
+    if suffix:
+        parts.append(suffix)
+    if notes:
+        parts.append(notes)
+
+    return ", ".join(parts)
+
+
+def build_negative_prompt(use_negative: bool = False) -> Optional[str]:
+    """
+    For SDXL-turbo you usually run guidance_scale=0.0.
+    Negative prompts have little effect at guidance=0; keep this off by default.
+    """
+    return NEGATIVE_HINT if use_negative else None
+
 
 TOKENS = 128
 
@@ -77,19 +202,6 @@ def model_generation(text, model, tokenizer, max_new_tokens=TOKENS):
 
     return response
    
-       
-def model_generation_image(prompt, image):
-       
-    device = "cuda"
-    pipe = StableDiffusionImg2ImgPipeline.from_pretrained("nitrosocke/Ghibli-Diffusion", torch_dtype=torch.float16).to(
-        device
-    )
-
-    generator = torch.Generator(device=device).manual_seed(1024)
-    image = pipe(prompt=prompt, image=image, strength=0.75, guidance_scale=7.5, generator=generator).images[0]
-    
-    return image
-
 
 # Construct chat prompt
 
@@ -167,37 +279,3 @@ def build_prompt(message, max_new_tokens=TOKENS):
 
     return prompt
 
-
-# ---------- Prompt builder ----------
-def build_sd_prompts(msg):
-
-    def _part(label, value):
-        return f"{label}: {value}" if value else None
-
-    # Generate prompt from aesthetics template
-    tech = msg.technology.value if msg.technology else "2D/3D"
-    bits = [f"{tech} game visual"]
-    if msg.char_env_item:
-        bits.append(f"{msg.char_env_item.value.lower()} for characters, environments, and items")
-    if msg.typo_menu:
-        bits.append(f"{msg.typo_menu.value.lower()} for typography and menus")
-    if msg.maps:
-        bits.append(f"{msg.maps.value.lower()} for maps")
-    core = ", ".join(bits).rstrip(", ") + "."
-    
-
-    constraints = list(filter(None, [
-        _part("Game Visual Style (Characters/Environments/Items)", msg.char_env_item.value if msg.char_env_item else None),
-        _part("Typography & Menus", msg.typo_menu.value if msg.typo_menu else None),
-        _part("Maps", msg.maps.value if msg.maps else None),
-        _part("Art Technology", msg.technology.value if msg.technology else None),
-    ]))
-
-    constraint_block = ""
-    if constraints:
-        constraint_block = "\n\n[Style Constraints]\n" + "\n".join(constraints)
-
-    positive_prompt = core + constraint_block
-
-    return positive_prompt
-    

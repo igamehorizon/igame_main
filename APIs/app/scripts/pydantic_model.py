@@ -1,11 +1,11 @@
 from typing import List
 from pydantic import BaseModel, Field
-
+from enum import Enum
 from typing import Optional, Tuple, Dict
 from enum import Enum
 from pydantic import BaseModel, field_validator
 
-from pydantic import BaseModel, Field, model_validator, constr
+from pydantic import BaseModel, Field, model_validator, constr, condecimal
 
 # --- Enums --- 
 
@@ -218,12 +218,6 @@ class StoryPrompt(BaseModel):
 # Enums
 # ----------------------------
 
-class GameStyle5(str, Enum):
-    RETRO = "Retro style"
-    CARTOON = "Cartoon style"
-    MINIMALISTIC = "Minimalistic style"
-    STYLISED = "Stylised style"
-    REALISTIC = "Realistic style"
 
 class TechChoice(str, Enum):
     # 2D
@@ -248,6 +242,47 @@ class TechChoice(str, Enum):
 # ----------------------------
 # Core template (prompt is required)
 # ----------------------------
+
+
+class GameStyle5(str, Enum):
+    RETRO = "Retro style"
+    CARTOON = "Cartoon style"
+    MINIMALISTIC = "Minimalistic style"
+    STYLISED = "Stylised style"
+    REALISTIC = "Realistic style"
+
+
+class StyleId(str, Enum):
+    retro = "retro"
+    cartoon = "cartoon"
+    minimalistic = "minimalistic"
+    stylised = "stylised"
+    realistic = "realistic"
+
+
+class Text2ImgRequest(BaseModel):
+    style: StyleId = StyleId.retro
+    prompt: str = Field("A masked courier in a rainy futuristic city, cinematic composition", min_length=1, max_length=1200)
+
+class Img2ImgRequest(BaseModel):
+    style: StyleId = StyleId.retro
+    prompt: Optional[str] = Field("more grain, flatter colors, retro palette", max_length=600)
+    strength: condecimal(ge=0.0, le=1.0) = 0.75  # type: ignore
+
+"""
+
+class Text2ImgRequest(BaseModel):
+    style: StyleId
+    prompt: str = Field(..., min_length=1, max_length=1200)
+
+class Img2ImgRequest(BaseModel):
+    style: StyleId
+    # In img2img this is "style notes" (optional). We'll still call it prompt for UI simplicity.
+    prompt: Optional[str] = Field(default="", max_length=600)
+    # UI slider 0..1, step 0.1 (we clamp anyway)
+    strength: condecimal(ge=0.0, le=1.0) = 0.5  # type: ignore
+
+"""
 
 class AestheticsMessage(BaseModel):
     """
