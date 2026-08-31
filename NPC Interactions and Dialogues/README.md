@@ -1,67 +1,80 @@
-# LLM for Unity — NPC Interaction Overview
+## 🔍 Overview
 
-This Unity project demonstrates using **LLM for Unity** to create intelligent, dynamic NPCs that interact with the player in a natural, context-aware way.  
-
----
-
-## 🚀 Key Features
-
-1. **Dynamic NPC Dialogue**  
-   - NPCs respond to player input using a connected **Large Language Model (LLM)**.  
-   - Dialogue is context-aware and adapts based on NPC personality or role.  
-
-2. **NPC Backgrounds & Profiles**  
-   - Assign **unique traits** to each NPC (name, role, goals, personality).  
-   - Automatically load NPC profiles from a **Game Design Document (GDD)** in JSON or structured text format.  
-   - Dialogue style and behavior are consistent with the background information.  
-
-3. **Dialogue-Driven Animations**  
-   - NPCs can **play animations** that match the tone or style of their dialogue.  
-   - Supports custom animations, Mixamo, or Unity animation clips.  
-   - Animation triggers can be linked to emotions or dialogue intensity.  
-
-4. **Automated Dialogue Flow**  
-   - Player input → LLM generates response → NPC displays reply → NPC plays animation.  
-   - Optional logging and analytics for reviewing and balancing interactions.  
+This module enables real-time LLM inference inside Unity scenes [cite: 1]. NPCs maintain consistent personalities, backstory knowledge, and dialogue styles while dynamically responding to player inputs [cite: 1].
 
 ---
 
-## ⚙️ How It Works
+## 🏗️ Architecture Summary
 
-1. **Assign NPC Traits**  
-   Each NPC has a profile (personality, role, goals). These influence the LLM when generating dialogue.  
-
-2. **Load Background Info from GDD**  
-   NPC profiles can be automatically populated from the GDD.  
-   Example:  
-   ```json
-   {
-     "name": "Alyra",
-     "role": "Village Healer",
-     "personality": "Kind, patient, curious",
-     "goals": "Protect villagers, learn new herbs"
-   }
-````
-
-This profile is passed to the LLM at runtime to shape NPC dialogue.
-
-3. **Define Dialogue-Linked Animations**
-
-   * Connect animations (happy, sad, idle, etc.) to LLM response tags.
-   * Example: “excited” reply → trigger animation clip for cheering.
-
-4. **Interaction Flow**
-
-   ```
-   Player Input → LLM → NPC Dialogue → NPC Animation → (Optional) Save Log
-   ```
+* **Personality Configuration:** Define backstories, secrets, and tone via structured prompts or JSON files [cite: 1].
+* **Prompt Engineering:** System-level constraints guide character boundaries and line limits [cite: 1].
+* **Real-Time Inference:** Direct binding between player UI input fields and LLM character instances [cite: 1].
 
 ---
 
-## 🎯 Benefits
+## 🛠️ Implementation Steps
 
-* Simplifies **NPC creation** by combining AI-driven dialogue and predefined behavior.
-* Ensures **consistent personalities** across scenes.
-* Reduces manual scripting for dialogue/animations.
-* Directly integrates **game design documents (GDDs)** into NPC behavior.
+### 1. LLM Manager Setup
+1. Create an empty GameObject in your scene named `LLM Manager` [cite: 1].
+2. Attach the `LLM` script component to it [cite: 1].
+3. Enable `Dont Destroy On Load` if persisting across scenes [cite: 1].
 
+### 2. Model Selection & Loading
+* **Selected Model:** `Llama 3.2 3B` (or equivalent GGUF weights) [cite: 1].
+* **Chat Template:** Select `Llama 3 (chat)` [cite: 1].
+* **Trade-off Consideration:** Smaller models (<3B) yield faster execution suitable for lightweight NPCs, while larger models provide richer dialogue at the cost of processing latency [cite: 1].
+
+### 3. Profile & Background Configuration
+Attach the `LLM Character` script to any interactive NPC GameObject [cite: 1]:
+* Link the `LLM Manager` reference [cite: 1].
+* Set character identity parameters [cite: 1]:
+  - **Name & Occupation** [cite: 1]
+  - **Personality Traits** [cite: 1]
+  - **Goals & Secrets** [cite: 1]
+  - **Dialogue Style & Line Limits** [cite: 1]
+
+### 4. Automated Batch Allocation (JSON)
+For multi-NPC environments, manage profiles centrally using a structured JSON file [cite: 1]:
+
+```json
+{
+  "profiles": [
+    {
+      "character_id": "npc_001",
+      "name": "Aya",
+      "role": "Freelance Graphic Designer",
+      "background": "Works from cafes and studios on small creative gigs.",
+      "personality": "Calm, witty, and focused.",
+      "goals": "Wants to grow her design brand and find steady clients.",
+      "dialogue_style": "Replies in short, friendly sentences — never more than two lines."
+    },
+    {
+      "character_id": "npc_002",
+      "name": "Marcus",
+      "role": "Rideshare Driver",
+      "background": "Knows the city by heart from endless rides.",
+      "personality": "Relaxed, humorous, quick thinker.",
+      "goals": "Dreams of publishing a small story collection.",
+      "dialogue_style": "Keeps it casual and brief — a few words, a quick joke, done."
+    }
+  ]
+}
+```
+
+Assign profiles in batch using the `NPC Data Assigner` script attached to an empty `NPC Manager` GameObject [cite: 1]:
+1. Assign the JSON file to `Json File` [cite: 1].
+2. Drag NPC GameObjects into the `Npc Objects` array in matching order [cite: 1].
+
+### 5. User Interface Setup
+Connect UI components (e.g., `TMP_InputField`, `TextMeshProUGUI`) via the `AI Response UI` controller component to display real-time streaming dialogue [cite: 1].
+
+### 6. Animation & State Integration
+Map NPC response triggers to Mecanim Animator states to mirror conversation tone [cite: 1]:
+* **Recommended States:** `Idle`, `Speaking`, `Happy`, `Angry`, `Curious`, `Thinking`, `Neutral Reaction` [cite: 1].
+
+---
+
+## 🎨 Recommended External Resources
+
+* **3D Rigged Characters & Animations:** [Mixamo](https://www.mixamo.com) for rigged assets and conversational motion clips [cite: 1].
+* **Environments & Props:** [Sketchfab](https://sketchfab.com) for 3D props and interactive scene elements [cite: 1].
