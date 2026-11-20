@@ -8,7 +8,7 @@ NPC Training – Provides reinforcement learning setups using Unity ML-Agents in
 NPC Interactions & Dialogues – An LLM-based toolkit for Unity that generates 
 persona-driven NPC conversations, with traits and dialogue auto-extracted from the Game Design Document (GDD).
 
-XAI for Game Balance – A tool that simulates gameplay across diverse player profiles, using explainable AI (e.g. SHAP, LIME) to highlight balance issues in accessible, human-readable ways.
+XAI for Game Balance – A standalone tool that analyses gameplay telemetry from real play sessions and uses machine learning with explainable AI (SHAP) to identify balance issues and generate prioritised, human-readable design recommendations, including before/after comparison across game versions.
 
 Storytelling Tools – A backend module that generates plots, synopses, and narrative elements from structured co-creation inputs, supporting collaborative GDD authoring.
 
