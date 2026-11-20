@@ -1,0 +1,74 @@
+{
+  "gameplay_instance": {
+    "instance_id": "ant_colony_001",
+    "start_condition": "agent enters the maze",
+    "end_condition": "agent reaches the exit or time expires",
+    "success_condition": "agent reaches the exit",
+    "failure_condition": "agent times out or gets stuck",
+    "telemetry_family": "pathfinding"
+  },
+  "events": [
+    {"timestamp":"2026-06-14T09:00:00Z","session_id":"s011","player_id":"agent_a","level_id":"maze_level_1","event_type":"level_start","decision_time_ms":0,"completion_time_ms":0,"success_flag":0,"was_backtracked":0,"moves":0,"timeout_flag":0,"nodes_expanded":0},
+    {"timestamp":"2026-06-14T09:00:02Z","session_id":"s011","player_id":"agent_a","level_id":"maze_level_1","event_type":"action","decision_time_ms":2400,"completion_time_ms":0,"success_flag":0,"was_backtracked":0,"moves":1,"timeout_flag":0,"nodes_expanded":19},
+    {"timestamp":"2026-06-14T09:00:05Z","session_id":"s011","player_id":"agent_a","level_id":"maze_level_1","event_type":"action","decision_time_ms":3200,"completion_time_ms":0,"success_flag":0,"was_backtracked":1,"moves":1,"timeout_flag":0,"nodes_expanded":26},
+    {"timestamp":"2026-06-14T09:00:08Z","session_id":"s011","player_id":"agent_a","level_id":"maze_level_1","event_type":"action","decision_time_ms":2800,"completion_time_ms":0,"success_flag":0,"was_backtracked":0,"moves":1,"timeout_flag":0,"nodes_expanded":22},
+    {"timestamp":"2026-06-14T09:00:11Z","session_id":"s011","player_id":"agent_a","level_id":"maze_level_1","event_type":"action","decision_time_ms":2200,"completion_time_ms":0,"success_flag":0,"was_backtracked":0,"moves":1,"timeout_flag":0,"nodes_expanded":18},
+    {"timestamp":"2026-06-14T09:00:14Z","session_id":"s011","player_id":"agent_a","level_id":"maze_level_1","event_type":"level_end","decision_time_ms":0,"completion_time_ms":14000,"success_flag":1,"was_backtracked":0,"moves":0,"timeout_flag":0,"nodes_expanded":0},
+
+    {"timestamp":"2026-06-14T09:05:00Z","session_id":"s012","player_id":"agent_b","level_id":"maze_level_1","event_type":"level_start","decision_time_ms":0,"completion_time_ms":0,"success_flag":0,"was_backtracked":0,"moves":0,"timeout_flag":0,"nodes_expanded":0},
+    {"timestamp":"2026-06-14T09:05:02Z","session_id":"s012","player_id":"agent_b","level_id":"maze_level_1","event_type":"action","decision_time_ms":1800,"completion_time_ms":0,"success_flag":0,"was_backtracked":0,"moves":1,"timeout_flag":0,"nodes_expanded":14},
+    {"timestamp":"2026-06-14T09:05:04Z","session_id":"s012","player_id":"agent_b","level_id":"maze_level_1","event_type":"action","decision_time_ms":2200,"completion_time_ms":0,"success_flag":0,"was_backtracked":0,"moves":1,"timeout_flag":0,"nodes_expanded":18},
+    {"timestamp":"2026-06-14T09:05:07Z","session_id":"s012","player_id":"agent_b","level_id":"maze_level_1","event_type":"action","decision_time_ms":1600,"completion_time_ms":0,"success_flag":0,"was_backtracked":0,"moves":1,"timeout_flag":0,"nodes_expanded":13},
+    {"timestamp":"2026-06-14T09:05:10Z","session_id":"s012","player_id":"agent_b","level_id":"maze_level_1","event_type":"level_end","decision_time_ms":0,"completion_time_ms":10000,"success_flag":1,"was_backtracked":0,"moves":0,"timeout_flag":0,"nodes_expanded":0},
+
+    {"timestamp":"2026-06-14T09:10:00Z","session_id":"s013","player_id":"agent_c","level_id":"maze_level_1","event_type":"level_start","decision_time_ms":0,"completion_time_ms":0,"success_flag":0,"was_backtracked":0,"moves":0,"timeout_flag":0,"nodes_expanded":0},
+    {"timestamp":"2026-06-14T09:10:02Z","session_id":"s013","player_id":"agent_c","level_id":"maze_level_1","event_type":"action","decision_time_ms":2600,"completion_time_ms":0,"success_flag":0,"was_backtracked":0,"moves":1,"timeout_flag":0,"nodes_expanded":21},
+    {"timestamp":"2026-06-14T09:10:05Z","session_id":"s013","player_id":"agent_c","level_id":"maze_level_1","event_type":"action","decision_time_ms":3400,"completion_time_ms":0,"success_flag":0,"was_backtracked":1,"moves":1,"timeout_flag":0,"nodes_expanded":28},
+    {"timestamp":"2026-06-14T09:10:09Z","session_id":"s013","player_id":"agent_c","level_id":"maze_level_1","event_type":"action","decision_time_ms":2400,"completion_time_ms":0,"success_flag":0,"was_backtracked":0,"moves":1,"timeout_flag":0,"nodes_expanded":19},
+    {"timestamp":"2026-06-14T09:10:13Z","session_id":"s013","player_id":"agent_c","level_id":"maze_level_1","event_type":"action","decision_time_ms":2000,"completion_time_ms":0,"success_flag":0,"was_backtracked":0,"moves":1,"timeout_flag":0,"nodes_expanded":16},
+    {"timestamp":"2026-06-14T09:10:17Z","session_id":"s013","player_id":"agent_c","level_id":"maze_level_1","event_type":"level_end","decision_time_ms":0,"completion_time_ms":17000,"success_flag":1,"was_backtracked":0,"moves":0,"timeout_flag":0,"nodes_expanded":0},
+
+    {"timestamp":"2026-06-14T09:15:00Z","session_id":"s014","player_id":"agent_d","level_id":"maze_level_1","event_type":"level_start","decision_time_ms":0,"completion_time_ms":0,"success_flag":0,"was_backtracked":0,"moves":0,"timeout_flag":0,"nodes_expanded":0},
+    {"timestamp":"2026-06-14T09:15:02Z","session_id":"s014","player_id":"agent_d","level_id":"maze_level_1","event_type":"action","decision_time_ms":3800,"completion_time_ms":0,"success_flag":0,"was_backtracked":1,"moves":1,"timeout_flag":0,"nodes_expanded":30},
+    {"timestamp":"2026-06-14T09:15:06Z","session_id":"s014","player_id":"agent_d","level_id":"maze_level_1","event_type":"action","decision_time_ms":4400,"completion_time_ms":0,"success_flag":0,"was_backtracked":1,"moves":1,"timeout_flag":0,"nodes_expanded":35},
+    {"timestamp":"2026-06-14T09:15:11Z","session_id":"s014","player_id":"agent_d","level_id":"maze_level_1","event_type":"action","decision_time_ms":3200,"completion_time_ms":0,"success_flag":0,"was_backtracked":0,"moves":1,"timeout_flag":0,"nodes_expanded":26},
+    {"timestamp":"2026-06-14T09:15:16Z","session_id":"s014","player_id":"agent_d","level_id":"maze_level_1","event_type":"level_end","decision_time_ms":0,"completion_time_ms":16000,"success_flag":0,"was_backtracked":0,"moves":0,"timeout_flag":0,"nodes_expanded":0},
+
+    {"timestamp":"2026-06-14T09:20:00Z","session_id":"s015","player_id":"agent_a","level_id":"maze_level_1","event_type":"level_start","decision_time_ms":0,"completion_time_ms":0,"success_flag":0,"was_backtracked":0,"moves":0,"timeout_flag":0,"nodes_expanded":0},
+    {"timestamp":"2026-06-14T09:20:02Z","session_id":"s015","player_id":"agent_a","level_id":"maze_level_1","event_type":"action","decision_time_ms":2000,"completion_time_ms":0,"success_flag":0,"was_backtracked":0,"moves":1,"timeout_flag":0,"nodes_expanded":16},
+    {"timestamp":"2026-06-14T09:20:04Z","session_id":"s015","player_id":"agent_a","level_id":"maze_level_1","event_type":"action","decision_time_ms":2600,"completion_time_ms":0,"success_flag":0,"was_backtracked":0,"moves":1,"timeout_flag":0,"nodes_expanded":21},
+    {"timestamp":"2026-06-14T09:20:07Z","session_id":"s015","player_id":"agent_a","level_id":"maze_level_1","event_type":"action","decision_time_ms":1800,"completion_time_ms":0,"success_flag":0,"was_backtracked":0,"moves":1,"timeout_flag":0,"nodes_expanded":14},
+    {"timestamp":"2026-06-14T09:20:10Z","session_id":"s015","player_id":"agent_a","level_id":"maze_level_1","event_type":"level_end","decision_time_ms":0,"completion_time_ms":10000,"success_flag":1,"was_backtracked":0,"moves":0,"timeout_flag":0,"nodes_expanded":0},
+
+    {"timestamp":"2026-06-14T09:25:00Z","session_id":"s016","player_id":"agent_b","level_id":"maze_level_1","event_type":"level_start","decision_time_ms":0,"completion_time_ms":0,"success_flag":0,"was_backtracked":0,"moves":0,"timeout_flag":0,"nodes_expanded":0},
+    {"timestamp":"2026-06-14T09:25:02Z","session_id":"s016","player_id":"agent_b","level_id":"maze_level_1","event_type":"action","decision_time_ms":2200,"completion_time_ms":0,"success_flag":0,"was_backtracked":0,"moves":1,"timeout_flag":0,"nodes_expanded":17},
+    {"timestamp":"2026-06-14T09:25:05Z","session_id":"s016","player_id":"agent_b","level_id":"maze_level_1","event_type":"action","decision_time_ms":1600,"completion_time_ms":0,"success_flag":0,"was_backtracked":0,"moves":1,"timeout_flag":0,"nodes_expanded":13},
+    {"timestamp":"2026-06-14T09:25:08Z","session_id":"s016","player_id":"agent_b","level_id":"maze_level_1","event_type":"action","decision_time_ms":2400,"completion_time_ms":0,"success_flag":0,"was_backtracked":0,"moves":1,"timeout_flag":0,"nodes_expanded":19},
+    {"timestamp":"2026-06-14T09:25:11Z","session_id":"s016","player_id":"agent_b","level_id":"maze_level_1","event_type":"level_end","decision_time_ms":0,"completion_time_ms":11000,"success_flag":1,"was_backtracked":0,"moves":0,"timeout_flag":0,"nodes_expanded":0},
+
+    {"timestamp":"2026-06-14T09:30:00Z","session_id":"s017","player_id":"agent_c","level_id":"maze_level_1","event_type":"level_start","decision_time_ms":0,"completion_time_ms":0,"success_flag":0,"was_backtracked":0,"moves":0,"timeout_flag":0,"nodes_expanded":0},
+    {"timestamp":"2026-06-14T09:30:02Z","session_id":"s017","player_id":"agent_c","level_id":"maze_level_1","event_type":"action","decision_time_ms":3200,"completion_time_ms":0,"success_flag":0,"was_backtracked":1,"moves":1,"timeout_flag":0,"nodes_expanded":26},
+    {"timestamp":"2026-06-14T09:30:06Z","session_id":"s017","player_id":"agent_c","level_id":"maze_level_1","event_type":"action","decision_time_ms":2800,"completion_time_ms":0,"success_flag":0,"was_backtracked":0,"moves":1,"timeout_flag":0,"nodes_expanded":22},
+    {"timestamp":"2026-06-14T09:30:10Z","session_id":"s017","player_id":"agent_c","level_id":"maze_level_1","event_type":"action","decision_time_ms":2400,"completion_time_ms":0,"success_flag":0,"was_backtracked":0,"moves":1,"timeout_flag":0,"nodes_expanded":19},
+    {"timestamp":"2026-06-14T09:30:14Z","session_id":"s017","player_id":"agent_c","level_id":"maze_level_1","event_type":"level_end","decision_time_ms":0,"completion_time_ms":14000,"success_flag":1,"was_backtracked":0,"moves":0,"timeout_flag":0,"nodes_expanded":0},
+
+    {"timestamp":"2026-06-14T09:35:00Z","session_id":"s018","player_id":"agent_d","level_id":"maze_level_1","event_type":"level_start","decision_time_ms":0,"completion_time_ms":0,"success_flag":0,"was_backtracked":0,"moves":0,"timeout_flag":0,"nodes_expanded":0},
+    {"timestamp":"2026-06-14T09:35:02Z","session_id":"s018","player_id":"agent_d","level_id":"maze_level_1","event_type":"action","decision_time_ms":1800,"completion_time_ms":0,"success_flag":0,"was_backtracked":0,"moves":1,"timeout_flag":0,"nodes_expanded":14},
+    {"timestamp":"2026-06-14T09:35:05Z","session_id":"s018","player_id":"agent_d","level_id":"maze_level_1","event_type":"action","decision_time_ms":2200,"completion_time_ms":0,"success_flag":0,"was_backtracked":0,"moves":1,"timeout_flag":0,"nodes_expanded":18},
+    {"timestamp":"2026-06-14T09:35:08Z","session_id":"s018","player_id":"agent_d","level_id":"maze_level_1","event_type":"action","decision_time_ms":2600,"completion_time_ms":0,"success_flag":0,"was_backtracked":1,"moves":1,"timeout_flag":0,"nodes_expanded":21},
+    {"timestamp":"2026-06-14T09:35:12Z","session_id":"s018","player_id":"agent_d","level_id":"maze_level_1","event_type":"action","decision_time_ms":1600,"completion_time_ms":0,"success_flag":0,"was_backtracked":0,"moves":1,"timeout_flag":0,"nodes_expanded":13},
+    {"timestamp":"2026-06-14T09:35:16Z","session_id":"s018","player_id":"agent_d","level_id":"maze_level_1","event_type":"level_end","decision_time_ms":0,"completion_time_ms":16000,"success_flag":1,"was_backtracked":0,"moves":0,"timeout_flag":0,"nodes_expanded":0},
+
+    {"timestamp":"2026-06-14T09:40:00Z","session_id":"s019","player_id":"agent_a","level_id":"maze_level_1","event_type":"level_start","decision_time_ms":0,"completion_time_ms":0,"success_flag":0,"was_backtracked":0,"moves":0,"timeout_flag":0,"nodes_expanded":0},
+    {"timestamp":"2026-06-14T09:40:02Z","session_id":"s019","player_id":"agent_a","level_id":"maze_level_1","event_type":"action","decision_time_ms":2800,"completion_time_ms":0,"success_flag":0,"was_backtracked":0,"moves":1,"timeout_flag":0,"nodes_expanded":22},
+    {"timestamp":"2026-06-14T09:40:05Z","session_id":"s019","player_id":"agent_a","level_id":"maze_level_1","event_type":"action","decision_time_ms":3600,"completion_time_ms":0,"success_flag":0,"was_backtracked":1,"moves":1,"timeout_flag":0,"nodes_expanded":29},
+    {"timestamp":"2026-06-14T09:40:09Z","session_id":"s019","player_id":"agent_a","level_id":"maze_level_1","event_type":"action","decision_time_ms":2200,"completion_time_ms":0,"success_flag":0,"was_backtracked":0,"moves":1,"timeout_flag":0,"nodes_expanded":18},
+    {"timestamp":"2026-06-14T09:40:13Z","session_id":"s019","player_id":"agent_a","level_id":"maze_level_1","event_type":"level_end","decision_time_ms":0,"completion_time_ms":13000,"success_flag":1,"was_backtracked":0,"moves":0,"timeout_flag":0,"nodes_expanded":0},
+
+    {"timestamp":"2026-06-14T09:45:00Z","session_id":"s020","player_id":"agent_b","level_id":"maze_level_1","event_type":"level_start","decision_time_ms":0,"completion_time_ms":0,"success_flag":0,"was_backtracked":0,"moves":0,"timeout_flag":0,"nodes_expanded":0},
+    {"timestamp":"2026-06-14T09:45:02Z","session_id":"s020","player_id":"agent_b","level_id":"maze_level_1","event_type":"action","decision_time_ms":2000,"completion_time_ms":0,"success_flag":0,"was_backtracked":0,"moves":1,"timeout_flag":0,"nodes_expanded":16},
+    {"timestamp":"2026-06-14T09:45:05Z","session_id":"s020","player_id":"agent_b","level_id":"maze_level_1","event_type":"action","decision_time_ms":1800,"completion_time_ms":0,"success_flag":0,"was_backtracked":0,"moves":1,"timeout_flag":0,"nodes_expanded":14},
+    {"timestamp":"2026-06-14T09:45:08Z","session_id":"s020","player_id":"agent_b","level_id":"maze_level_1","event_type":"action","decision_time_ms":2400,"completion_time_ms":0,"success_flag":0,"was_backtracked":0,"moves":1,"timeout_flag":0,"nodes_expanded":19},
+    {"timestamp":"2026-06-14T09:45:11Z","session_id":"s020","player_id":"agent_b","level_id":"maze_level_1","event_type":"level_end","decision_time_ms":0,"completion_time_ms":11000,"success_flag":1,"was_backtracked":0,"moves":0,"timeout_flag":0,"nodes_expanded":0}
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "gameplay_instance": {
+    "instance_id": "sc_session_001",
+    "start_condition": "encounter begins",
+    "end_condition": "encounter cleared or player defeated",
+    "success_condition": "all enemies defeated",
+    "failure_condition": "player health reaches zero",
+    "telemetry_family": "strategy_combat"
+  },
+  "events": [
+    {"timestamp":"2024-01-01T10:00:00Z","session_id":"s001","player_id":"player_a","level_id":"encounter_1","event_type":"level_start","decision_time_ms":0,"completion_time_ms":0,"success_flag":0,"moves":0,"damage_taken":0,"deaths":0,"resource_loss":0,"healing_usage":0},
+    {"timestamp":"2024-01-01T10:00:04Z","session_id":"s001","player_id":"player_a","level_id":"encounter_1","event_type":"action","decision_time_ms":2100,"completion_time_ms":0,"success_flag":0,"moves":1,"damage_taken":15,"deaths":0,"resource_loss":5,"healing_usage":0},
+    {"timestamp":"2024-01-01T10:00:10Z","session_id":"s001","player_id":"player_a","level_id":"encounter_1","event_type":"action","decision_time_ms":1800,"completion_time_ms":0,"success_flag":0,"moves":1,"damage_taken":10,"deaths":0,"resource_loss":0,"healing_usage":1},
+    {"timestamp":"2024-01-01T10:00:20Z","session_id":"s001","player_id":"player_a","level_id":"encounter_1","event_type":"level_end","decision_time_ms":0,"completion_time_ms":20000,"success_flag":1,"moves":0,"damage_taken":0,"deaths":0,"resource_loss":0,"healing_usage":0}
+  ]
+}

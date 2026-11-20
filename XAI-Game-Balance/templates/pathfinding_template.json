@@ -1,0 +1,15 @@
+{
+  "gameplay_instance": {
+    "instance_id": "pf_session_001",
+    "start_condition": "player enters level",
+    "end_condition": "goal reached or timeout",
+    "success_condition": "player reaches exit",
+    "failure_condition": "timeout or explicit failure",
+    "telemetry_family": "pathfinding"
+  },
+  "events": [
+    {"timestamp":"2024-01-01T10:00:00Z","session_id":"s001","player_id":"agent_a","level_id":"level_1","event_type":"level_start","decision_time_ms":0,"completion_time_ms":0,"success_flag":0,"was_backtracked":0,"moves":0,"timeout_flag":0,"nodes_expanded":0},
+    {"timestamp":"2024-01-01T10:00:02Z","session_id":"s001","player_id":"agent_a","level_id":"level_1","event_type":"action","decision_time_ms":320,"completion_time_ms":0,"success_flag":0,"was_backtracked":0,"moves":1,"timeout_flag":0,"nodes_expanded":12},
+    {"timestamp":"2024-01-01T10:00:06Z","session_id":"s001","player_id":"agent_a","level_id":"level_1","event_type":"level_end","decision_time_ms":0,"completion_time_ms":6000,"success_flag":1,"was_backtracked":0,"moves":0,"timeout_flag":0,"nodes_expanded":0}
+  ]
+}
